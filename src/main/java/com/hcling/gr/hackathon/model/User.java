@@ -15,7 +15,7 @@ public User(long userID, String name, String role, String login_name, String log
 		this.userID = userID;
 		this.name = name;
 		this.role = role;
-		this.login_name = login_name;
+		this.loginName = login_name;
 		this.login_pwd = login_pwd;
 	}
 public long getUserID() {
@@ -37,10 +37,10 @@ public long getUserID() {
 		this.role = role;
 	}
 	public String getLogin_name() {
-		return login_name;
+		return loginName;
 	}
 	public void setLogin_name(String login_name) {
-		this.login_name = login_name;
+		this.loginName = login_name;
 	}
 	public String getLogin_pwd() {
 		return login_pwd;
@@ -56,7 +56,7 @@ private String name;
 @Column(name="Role")
 private String role;
 @Column(name="Login_Name")
-private String login_name;
+private String loginName;
 @Column(name="Login_Pwd")
 private String login_pwd;
 }
