@@ -12,39 +12,25 @@ import java.util.List;
 @Entity
 @Table(name = "PRODUCT_GROUP")
 public class ProductGroup {
-    public ProductGroup() {
+	/**
+	 * Instantiates a new Product group.
+	 */
+	public ProductGroup() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * Instantiates a new Product group.
+	 *
+	 * @param id       the id
+	 * @param name     the name
+	 * @param products the products
+	 */
 	public ProductGroup(Long id, String name, List<Product> products) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.products = products;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public List<Product> getProducts() {
-		return products;
-	}
-
-	public void setProducts(List<Product> products) {
 		this.products = products;
 	}
 

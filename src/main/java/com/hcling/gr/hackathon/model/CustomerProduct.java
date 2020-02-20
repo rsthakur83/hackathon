@@ -12,7 +12,6 @@ import lombok.Data;
 /**
  * The type Customer product.
  */
-
 @Data
 @Entity
 @Table(name = "user_product")

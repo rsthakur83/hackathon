@@ -4,13 +4,29 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+/**
+ * The type User.
+ */
 @Entity(name="USER")
 public class User {
 
-public User() {
+    /**
+     * Instantiates a new User.
+     */
+    public User() {
 		super();
 	}
-public User(long userID, String name, String role, String login_name, String login_pwd) {
+
+    /**
+     * Instantiates a new User.
+     *
+     * @param userID     the user id
+     * @param name       the name
+     * @param role       the role
+     * @param login_name the login name
+     * @param login_pwd  the login pwd
+     */
+    public User(long userID, String name, String role, String login_name, String login_pwd) {
 		super();
 		this.userID = userID;
 		this.name = name;
@@ -18,34 +34,94 @@ public User(long userID, String name, String role, String login_name, String log
 		this.loginName = login_name;
 		this.login_pwd = login_pwd;
 	}
-public long getUserID() {
+
+    /**
+     * Gets user id.
+     *
+     * @return the user id
+     */
+    public long getUserID() {
 		return userID;
 	}
-	public void setUserID(long userID) {
+
+    /**
+     * Sets user id.
+     *
+     * @param userID the user id
+     */
+    public void setUserID(long userID) {
 		this.userID = userID;
 	}
-	public String getName() {
+
+    /**
+     * Gets name.
+     *
+     * @return the name
+     */
+    public String getName() {
 		return name;
 	}
-	public void setName(String name) {
+
+    /**
+     * Sets name.
+     *
+     * @param name the name
+     */
+    public void setName(String name) {
 		this.name = name;
 	}
-	public String getRole() {
+
+    /**
+     * Gets role.
+     *
+     * @return the role
+     */
+    public String getRole() {
 		return role;
 	}
-	public void setRole(String role) {
+
+    /**
+     * Sets role.
+     *
+     * @param role the role
+     */
+    public void setRole(String role) {
 		this.role = role;
 	}
-	public String getLogin_name() {
+
+    /**
+     * Gets login name.
+     *
+     * @return the login name
+     */
+    public String getLogin_name() {
 		return loginName;
 	}
-	public void setLogin_name(String login_name) {
+
+    /**
+     * Sets login name.
+     *
+     * @param login_name the login name
+     */
+    public void setLogin_name(String login_name) {
 		this.loginName = login_name;
 	}
-	public String getLogin_pwd() {
+
+    /**
+     * Gets login pwd.
+     *
+     * @return the login pwd
+     */
+    public String getLogin_pwd() {
 		return login_pwd;
 	}
-	public void setLogin_pwd(String login_pwd) {
+
+    /**
+     * Sets login pwd.
+     *
+     * @param login_pwd the login pwd
+     */
+    public void setLogin_pwd(String login_pwd) {
 		this.login_pwd = login_pwd;
 	}
 @Id

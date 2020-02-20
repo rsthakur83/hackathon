@@ -1,8 +1,6 @@
 package com.hcling.gr.hackathon.controller;
 
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,11 +9,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hcling.gr.hackathon.model.CustomerProductResponse;
-import com.hcling.gr.hackathon.model.Product;
-import com.hcling.gr.hackathon.model.Response;
 import com.hcling.gr.hackathon.service.CustomerProductService;
 
 
+/**
+ * The type Customer product controller.
+ */
 @RestController
 public class CustomerProductController {
 
@@ -25,6 +24,7 @@ public class CustomerProductController {
     /**
      * Gets data.
      *
+     * @param customerId the customer id
      * @return the data
      */
     @GetMapping("/customers/{customerId}/products")
