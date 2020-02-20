@@ -4,6 +4,8 @@ import lombok.Data;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * The type Product.
  */
@@ -19,6 +21,7 @@ public class Product {
     private String name;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "product_group_id")
     private ProductGroup group;
 
