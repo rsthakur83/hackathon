@@ -17,7 +17,7 @@ public class CustomerProductController {
     private CustomerProductService cpService;
 
     @GetMapping("/customers/{customerId}/products")
-    public List<ProductGroups> getData() {
-        return new ArrayList<ProductGroups>();
+    public ProductGroups getData() {
+        return new ProductGroups();
     }
 }
