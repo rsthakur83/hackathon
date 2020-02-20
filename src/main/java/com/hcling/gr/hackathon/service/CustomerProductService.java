@@ -59,7 +59,14 @@ public class CustomerProductService {
         	ProductGroups gp=new ProductGroups();
         	gp.setName(pg.getName());
         	gp.setId(pg.getId());
-        	gp.setProducts(responseMap.get(pg));
+        	List<Product> prList=new ArrayList<>();
+        	responseMap.get(pg).stream().forEach(product -> {
+        		Product p = new Product();
+        		p.setId(product.getId());
+        		p.setName(product.getName());
+        		prList.add(p);
+        	});
+        	gp.setProducts(prList);
         	resp.add(gp);
         });
 
