@@ -20,34 +20,8 @@ public class Product {
     @Column(name = "Name")
     private String name;
 
+	@JsonIgnore
     @ManyToOne
-    @JsonIgnore
     @JoinColumn(name = "product_group_id")
     private ProductGroup group;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public ProductGroup getGroup() {
-		return group;
-	}
-
-	public void setGroup(ProductGroup group) {
-		this.group = group;
-	}
-    
-    
 }

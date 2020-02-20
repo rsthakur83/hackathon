@@ -1,11 +1,9 @@
 package com.hcling.gr.hackathon.service;
 
-import com.hcling.gr.hackathon.controller.CustomerProductData;
-import com.hcling.gr.hackathon.model.CustomerProduct;
 import com.hcling.gr.hackathon.model.CustomerProductResponse;
 import com.hcling.gr.hackathon.model.Product;
 import com.hcling.gr.hackathon.model.ProductGroup;
-import com.hcling.gr.hackathon.model.ProductGroups;
+import com.hcling.gr.hackathon.model.ProductGroupResponse;
 import com.hcling.gr.hackathon.repository.CustomerProductRepository;
 import com.hcling.gr.hackathon.repository.ProductGroupRepository;
 import com.hcling.gr.hackathon.repository.ProductRepository;
@@ -54,28 +52,24 @@ public class CustomerProductService {
                 responseMap.put(key, productList);
             }
         });
-        List<ProductGroups> resp=new ArrayList<>();
+
+        List<ProductGroupResponse> productGroupResponses = new ArrayList<>();
         responseMap.keySet().stream().forEach(pg-> {
-        	ProductGroups gp=new ProductGroups();
-        	gp.setName(pg.getName());
-        	gp.setId(pg.getId());
-        	List<Product> prList=new ArrayList<>();
+        	ProductGroupResponse productGroupResponse = new ProductGroupResponse();
+            productGroupResponse.setName(pg.getName());
+            productGroupResponse.setId(pg.getId());
+        	List<Product> productList = new ArrayList<>();
         	responseMap.get(pg).stream().forEach(product -> {
         		Product p = new Product();
         		p.setId(product.getId());
         		p.setName(product.getName());
-        		prList.add(p);
+                productList.add(p);
         	});
-        	gp.setProducts(prList);
-        	resp.add(gp);
+            productGroupResponse.setProducts(productList);
+            productGroupResponses.add(productGroupResponse);
         });
-
         CustomerProductResponse response = new CustomerProductResponse();
-        response.setProductGroup(resp);
-
+        response.setProductGroup(productGroupResponses);
         return response;
-        
-        
     }
-
 }

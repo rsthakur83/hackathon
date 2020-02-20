@@ -7,16 +7,25 @@ import lombok.Data;
 /**
  * The type Customer product.
  */
-
 @Data
 public class CustomerProductResponse {
-    private List<ProductGroups> productGroup ;
+    private List<ProductGroupResponse> productGroup ;
 
-	public List<ProductGroups> getProductGroup() {
+    /**
+     * Gets product group.
+     *
+     * @return the product group
+     */
+    public List<ProductGroupResponse> getProductGroup() {
 		return productGroup;
 	}
 
-	public void setProductGroup(List<ProductGroups> productGroup) {
+    /**
+     * Sets product group.
+     *
+     * @param productGroup the product group
+     */
+    public void setProductGroup(List<ProductGroupResponse> productGroup) {
 		this.productGroup = productGroup;
 	}
     
