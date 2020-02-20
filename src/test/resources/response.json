@@ -1,0 +1,16 @@
+{
+ "productGroups" : 
+   [ { "id": 1,
+     "name": "Savings",
+     "products": 
+        [{ "id": 1,
+         "name": "Girls Savings Account"
+         },
+         {
+           "id": 1,
+         "name": "for some Savings Account"
+         }
+         ]          
+      }
+   ]
+ }

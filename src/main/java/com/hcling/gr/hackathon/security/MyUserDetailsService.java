@@ -25,4 +25,5 @@ import com.hcling.gr.hackathon.model.User;
 	        return user.map(MyUserDetails::new).get();
 	    }
 
+
 }
